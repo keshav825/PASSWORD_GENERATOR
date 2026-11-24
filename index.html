@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+
+    <link rel="stylesheet" href="script.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Password Generator</h1>
+
+        <!-- Password Display -->
+        <div class="display_conatiner">
+
+            <input
+                readonly
+                placeholder="Password"
+                class="display"
+                data-passwordDisplay
+            >
+
+            <button data-copy type="button">
+                <span data-copyMsg></span>
+
+                <img
+                    src="./asset/copy.svg"
+                    alt="copy"
+                    width="18"
+                    height="18"
+                >
+            </button>
+
+        </div>
+
+        <!-- Password Length -->
+        <div class="input_container">
+
+            <div class="length_conatiner">
+                <p>Password Length</p>
+                <p data-lengthNumber>10</p>
+            </div>
+
+        </div>
+
+        <!-- Slider -->
+        <div class="slidecontainer">
+
+            <input
+                type="range"
+                min="4"
+                max="20"
+                value="10"
+                class="slider"
+                id="myRange"
+                step="1"
+                data-lengthSlider
+            >
+
+        </div>
+
+        <!-- Checkboxes -->
+        <div class="checkbox_container">
+
+            <div>
+                <input type="checkbox" id="uppercase">
+                <label for="uppercase">
+                    Includes uppercase letters
+                </label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="lowercase">
+                <label for="lowercase">
+                    Includes lowercase letters
+                </label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="number">
+                <label for="number">
+                    Includes numbers
+                </label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="symbol">
+                <label for="symbol">
+                    Includes symbols
+                </label>
+            </div>
+
+        </div>
+
+        <!-- Strength -->
+        <div class="strength_container">
+
+            <p>Strength</p>
+
+            <div data-indicator></div>
+
+        </div>
+
+        <!-- Generate Password -->
+        <div class="generate_passwsord">
+
+            <button class="generate_button" type="button">
+                Generate Password
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

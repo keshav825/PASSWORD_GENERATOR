@@ -1,0 +1,263 @@
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+/* Main Container */
+.container {
+    width: 420px;
+    max-width: 92%;
+    padding: 30px;
+    background: #1e293b;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #a78bfa;
+}
+
+/* Password Display */
+.display_conatiner {
+    display: flex;
+    align-items: center;
+    background: #0f172a;
+    border-radius: 10px;
+    padding: 5px 12px;
+    border: 2px solid #475569;
+    margin-bottom: 25px;
+}
+
+.display {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 5px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #a78bfa;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+.display::placeholder {
+    color: #64748b;
+}
+
+.display_conatiner button {
+    position: relative;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.display_conatiner button img {
+    filter: invert(75%) sepia(30%) saturate(1000%);
+}
+
+.display_conatiner button span {
+    position: absolute;
+    bottom: 40px;
+    right: -10px;
+    background: #a78bfa;
+    color: #111827;
+    padding: 4px 10px;
+    font-size: 11px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.display_conatiner button span.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Password Length */
+.input_container {
+    margin-bottom: 15px;
+}
+
+.length_conatiner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.length_conatiner p:last-child {
+    color: #a78bfa;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Slider */
+.slidecontainer {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.slider {
+    appearance: none;
+    width: 100%;
+    height: 7px;
+    border-radius: 10px;
+    background: #475569;
+    outline: none;
+    cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background: #a78bfa;
+    cursor: pointer;
+    border: 3px solid white;
+    box-shadow: 0 0 8px rgba(167, 139, 250, 0.6);
+}
+
+.slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #a78bfa;
+    cursor: pointer;
+    border: 3px solid white;
+}
+
+/* Checkboxes */
+.checkbox_container > div {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+    border: 2px solid #a78bfa;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="checkbox"]:checked {
+    background: #a78bfa;
+}
+
+input[type="checkbox"]:checked::after {
+    content: "✓";
+    position: absolute;
+    top: -3px;
+    left: 2px;
+    color: #1e293b;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+label {
+    font-size: 13px;
+    color: #cbd5e1;
+    cursor: pointer;
+}
+
+/* Strength Section */
+.strength_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    padding: 12px;
+    background: #0f172a;
+    border-radius: 8px;
+}
+
+.strength_container p {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+[data-indicator] {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: #ef4444;
+    box-shadow: 0 0 10px currentColor;
+}
+
+/* Generate Button */
+.generate_passwsord {
+    margin-top: 25px;
+}
+
+.generate_button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.generate_button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
+}
+
+.generate_button:active {
+    transform: scale(0.97);
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+
+    .container {
+        padding: 22px;
+    }
+
+    .container h1 {
+        font-size: 22px;
+    }
+
+    .display {
+        font-size: 14px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+}
